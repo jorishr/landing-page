@@ -1,5 +1,5 @@
 # basic front-end dev project: serverLess
-From AdobeXD prototype to HTML/CSS/JS
+From AdobeXD prototype design to HTML/CSS/JS code.
 
 Based on the prototype: 
 https://xd.adobe.com/spec/f5d62c7b-a574-44e2-5376-5e4ccab05552-83e7/

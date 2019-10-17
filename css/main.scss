@@ -1,5 +1,6 @@
 /*  #####################
     MOBILE FIRST APPROACH
+    -GENERAL STYLES
     #####################  */
 
 body {
@@ -112,6 +113,7 @@ h1 {
 
 h2 {
     font-size: 1.1rem;
+    font-weight: 400;
     color: #454545;
     position: relative;
     z-index: 2;
@@ -194,7 +196,7 @@ h2 {
     margin: 4em 0;
 }
 
-.gray-bg-container li:first-child {
+.gray-bg-container li:first-of-type {
     margin-bottom: 4em;
 }
 
@@ -271,23 +273,19 @@ footer a:hover {
 }
 
 footer .logo {
-    text-align: left;
+    text-align: center;
     width: 80px;
-    float: left;
     margin: .5em 0;
 }
 
 footer address {
-    clear: both;
-    float: left;
-    text-align: left;
+    text-align: center;
     margin-bottom: 2em;
 }
 
 footer ul {
-    clear: both;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 2em;
 }
 
@@ -295,6 +293,9 @@ footer ul li a {
     margin-right: 1em;
 }
 
+/*  ##################
+    BIG MOBILE SCREENS
+    ##################  */
 
 @media only screen and (min-width: 426px) {
 
@@ -331,50 +332,109 @@ footer ul li a {
         margin: 4em auto;
     }
 
-    .cta__btn {
-        max-width: 500px;
-        margin-right: auto;
-        margin-left: auto;
-    }
 }
 
-@media only screen and (min-width: 786px) {
+/*  ##############
+    TABLET SCREENS
+    ##############  */
 
-    .hide-desktop {
-        display: none;
-    }
+@media only screen and (min-width: 768px) {
 
     .hero__server {
         width: 30%;
         margin: 2em auto 1em 8%; 
     }
 
-    .scroll {
-        display: block;
-        margin: 2em auto 1em;
-        height: 45px;
-        animation: bounce alternate 2s;
+    .blue-bg-container ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
-    
-    @keyframes bounce {
-        from {
-            top: 0;
-        }
-        to {
 
-        }
+    .blue-bg-container ul li {
+        margin-right: 4em;
+    }
+
+    .blue-bg-container ul li:last-child {
+        margin-right: 0;
     }
     
     .blue-bg-container img {
-        width: 10%;
+        width: 20%;
     }
     
     .blue-bg-container li:nth-child(3) img {
-        width: 5%;
+        width: 10%;
+    }
+
+    .gray-bg-container ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        max-width: inherit;
+    }
+
+    .gray-bg-container li:first-of-type {
+        margin-bottom: 0;
+        margin-right: 4em;
+    }
+
+    .cta {
+        margin: -50px auto 0;
+    }
+
+    .cta__btn {
+        margin-bottom: 2em;
+        max-width: 50%;
+        margin: 2em auto;
+    }
+
+    footer ul {
+        justify-content: center;
     }
 }
 
+/*  ###############
+    DESKTOP SCREENS
+    ###############  */
+
 @media only screen and (min-width: 1024px) {
+
+    .container {
+        width: 80%
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .show-desktop {
+        display: block;
+    }
+
+    nav ul {
+        background-color: inherit;
+        position: inherit;
+        height: inherit;
+        width: inherit;
+        padding: inherit;
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        background-color: inherit;
+        color: black;
+        opacity: .75;
+        width: inherit;
+        line-height: 1.75;
+    }
+
+    nav ul li a:hover {
+        color: white;
+    }
 
     .hero__server {
         width: 35%;
@@ -382,19 +442,95 @@ footer ul li a {
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
+        margin-bottom: 1%;
     }
     
     h2 {
         font-size: 1.3rem;
-        margin-bottom: 2em;
+        margin: 0 0 2%;
     }
 
     .scroll {
-        height: 55px;
+        display: block;
+        margin: 2em auto 1em;
+        height: 50px;
+        position: relative;
+        animation: bounce .7s infinite alternate;
+    }
+    
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(20%);
+        }
+    }
+    
+    .blue-bg-container {
+        margin: 5% 0 0;
+    }
+
+    footer .logo {
+        float: left;
+    }
+    
+    footer address {
+        clear: left;
+        float: left;
+        text-align: left;
+    }
+
+    footer ul {
+        clear: both;
+        justify-content: flex-end;
+    }
+}
+
+/*  ##########
+    4K SCREENS
+    ##########  */
+
+@media only screen and (min-width: 1600px) {
+
+    .container {
+        width: 65%;
+    }
+    .hero__server {
+        width: 20%;
+        margin: 2em auto 1em 5%; 
     }
 
     .blue-bg-container {
-        margin: 5% 0 0;
+        padding: 7em 0 4em;
+    }
+
+    .blue-bg-container p{
+        font-size: 1.3em;
+    }
+
+    .blue-bg-container ul li{
+        margin-right: 6em;
+    } 
+
+    .blue-bg-container ul li:last-of-type{
+        margin-right: 0;
+    } 
+
+    .gray-bg-container {
+        padding: 4em 0 2em;
+    }
+
+    .gray-bg-container li:first-of-type{
+        margin-right: 7em;
+    }
+
+    .gray-bg-container blockquote, .gray-bg-container figcaption {
+        font-size: 1.3em;
+    }
+
+    .cta {
+        padding: 4em 0;
     }
 }

@@ -1,6 +1,17 @@
 /*  #####################
     MOBILE FIRST APPROACH
-    -GENERAL STYLES
+    - GENERAL STYLES
+    - NAVBAR
+    - HERO
+    - BLUE BG CONTAINER SECTION
+    - GRAY BG CONTAINER SECTION
+    - CTA SECTION
+    - FOOTER
+    - MEDIA QUERIES:
+        --BIG MOBILE SCREENS
+        --TABLET SCREENS
+        --DESKTOP SCREENS
+        --4K SCREENS
     #####################  */
 
 body {
@@ -59,6 +70,7 @@ header {
     display: none;
 }
 
+/* when visible on mobile the menu takes up 60% of the screen*/
 nav ul {
     position: fixed;
     z-index: 6;
@@ -132,6 +144,13 @@ h2 {
     BLUE BG CONTAINER SECTION
     #########################   */
 
+/*  background shapes:
+    - skewed bg container, content skewed opposite direction to correct
+    - pseudo elements are overlapping square and circle that create the 
+    illusion of upwards rounded corner, the circle is double the size of the
+    square
+    - the downwards rounded is a simple border-radius */
+
 .blue-bg-container {
     width: 100%;
     margin: 15% 0 0;
@@ -183,7 +202,6 @@ h2 {
 .blue-bg-container li:nth-child(3) img {
     width: 15%;
 }
-
 
 /*  #########################
     GRAY BG CONTAINER SECTION
@@ -264,6 +282,10 @@ figcaption::before {
     FOOTER
     ######   */
 
+/*  the footer needs to be larger (height) than the container that generate the 
+    skew effect (.footer-bg-container) to compensate for skew and still keep a 
+    straight edge at the bottom */
+
 footer {
     background-color: rgb(43, 43, 43);
     border-top-right-radius: 50px;
@@ -271,9 +293,6 @@ footer {
     font-size: .8em;
     height: 210px;  
     position: relative;
-    /* 
-        larger than height .footer-bg-container to compensate for skew and 
-        keep a straight edge at the bottom  */
 }
 
 .footer-bg-container {  
@@ -345,7 +364,7 @@ footer ul li a {
 }
 
 footer p {
-    /* check html markup, p lives outside containers */
+    /* check html markup, this p lives outside containers */
     text-align: center;
     position: absolute;
     left: 50%;
